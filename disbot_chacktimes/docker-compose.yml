@@ -1,0 +1,9 @@
+services:
+  discord-bot:
+    build: .
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - LOG_CHANNEL_ID=${LOG_CHANNEL_ID}
+    restart: unless-stopped

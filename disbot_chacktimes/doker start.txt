@@ -1,0 +1,28 @@
+docker build -t discord-bot .
+docker run -d --restart unless-stopped --name my-discord-bot discord-bot
+docker stop my-discord-bot
+docker start my-discord-bot
+
+# Build image
+docker-compose build
+
+# รัน container
+docker-compose up -d
+
+# ดู logs
+docker-compose logs -f
+
+# ล้าง Cache Docker
+docker builder prune --force
+
+# Build ใหม่
+docker-compose build
+
+# รัน Container
+docker-compose up -d
+
+# สร้างและรัน
+docker-compose up -d --build
+
+# ดู logs
+docker-compose logs -f
